@@ -344,7 +344,24 @@ section.single-article { padding-bottom: 90px; }
 				
 				line-height: normal;
 				letter-spacing: normal;
-			}	
+			}
+
+			section.single-article figure .videoCage{
+				position: relative;
+				padding-bottom: 56.25%; /* 16:9 */
+				padding-top: 25px;
+				margin-bottom: 20px;
+				height: 0;
+			}
+
+			section.single-article figure .videoCage iframe{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+
 
 	section.single-article blockquote {
 		width: 100%;
