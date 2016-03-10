@@ -200,6 +200,10 @@
 	section.trending { padding: 0 0 45px 0; }
 	.trending_carousel { margin-top: -15px; }
 
+	section.trending article{
+		width: 100%;
+	}
+
 	section.trending article.two {
 		margin-top: 0;
 		margin-bottom: 16px;

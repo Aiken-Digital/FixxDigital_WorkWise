@@ -42,6 +42,7 @@ $( document ).ready(function() {
 	var carousel_trending = new Swiper (".carousel-trending", {
 	    pagination: '.carousel-trending .swiper-pagination',
 		paginationClickable: true,
+		autoHeight: true,
 	});
 
 
