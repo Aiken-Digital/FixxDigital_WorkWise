@@ -1,8 +1,9 @@
 if ($("aside.article-share").length > 0) {
 	$(window).scroll(function() { 
 		$("aside.article-share").toggleClass("top", $(window).scrollTop() > 140); 
-		var tagsPos = $(".tags").position();
-		$("aside.article-share").toggleClass("disappear", $(window).scrollTop() > tagsPos.top); 
+		var tagsPos = $(".single-article").height() -500;
+		console.log(tagsPos +' baby');
+		$("aside.article-share").toggleClass("disappear", $(window).scrollTop() > tagsPos); 
 	});
 };
 
