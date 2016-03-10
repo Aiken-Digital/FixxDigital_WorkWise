@@ -444,6 +444,11 @@
 
 
 
+@media (max-width: 985px) { 
+	section.single-article .btn-next-article{
+		margin-right: 0;
+	}
+}
 
 
 

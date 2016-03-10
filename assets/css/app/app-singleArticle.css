@@ -702,7 +702,17 @@ section.single-article { padding-bottom: 90px; }
 					margin: 0 8px 0 0;
 					background-image: url('../../images/icon-share-email.png');
 				}
+	
 
+	section.single-article .btn-prev-article{
+		float: left;
+	}
+
+	section.single-article .btn-next-article{
+		float: right;
+		margin-right: 16.66666667%;
+	}
+	
 	section.single-article .btn-prev-article p,
 	section.single-article .btn-next-article p {
 		width: 100%;
