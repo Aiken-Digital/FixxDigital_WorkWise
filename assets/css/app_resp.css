@@ -295,12 +295,14 @@
 		padding-bottom: 80px; 
 	}
 
-	section.divider .qoutes-text p {
+	section.divider .qoutes-text p,
+	section.categories .qoutes-text p {
 		font-size: 32.5px;
 		line-height: 48.75px;
 	}
 
-		section.divider .qoutes-text p span.text {
+		section.divider .qoutes-text p span.text,
+		section.categories .qoutes-text p span.text {
 			width: 80%;
 			position: relative;
 			display: block;
@@ -313,7 +315,9 @@
 		}
 
 		section.divider .qoutes-text p span:first-child,
-		section.divider .qoutes-text p span:last-child {
+		section.divider .qoutes-text p span:last-child,
+		section.categories .qoutes-text p span:first-child,
+		section.categories .qoutes-text p span:last-child  {
 
 			display: block;
 			position: relative;
@@ -326,7 +330,9 @@
 		}
 
 	section.divider .qoutes-image p.title, 
-	section.divider .qoutes-video p.title {
+	section.divider .qoutes-video p.title,
+	section.categories .qoutes-image p.title, 
+	section.categories .qoutes-video p.title {
 		min-height: initial;
 		height: auto;
 
@@ -339,7 +345,9 @@
 	}
 
 		section.divider .qoutes-image p.title span, 
-		section.divider .qoutes-video p.title span {
+		section.divider .qoutes-video p.title span,
+		section.categories .qoutes-image p.title span, 
+		section.categories .qoutes-video p.title span {
 			position: relative;
 			float: left;
 			top: 0;

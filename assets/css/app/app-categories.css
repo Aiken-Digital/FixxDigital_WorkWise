@@ -508,25 +508,37 @@ section.loadmore { padding: 4px 0 90px 0; }
 /****************************************/
 section.divider { padding-bottom: 90px; }
 
-	section.divider .dotted {
+	section.divider .dotted, 
+	section.categories .dotted {
 		background-image: url('../../images/bg_divider.png');
 		background-repeat: repeat;
 		background-size: 16px;
 		background-position: center;
 	}
 
+	section.categories .dotted {
+		margin-bottom: 40px;
+	}
+
 	section.divider .qoutes-text,
-	section.divider .qoutes-video,
-	section.divider .qoutes-image {
+	section.divider .qoutes-video, 
+	section.divider .qoutes-image, 
+	section.categories .qoutes-text,
+	section.categories .qoutes-video,
+	section.categories .qoutes-image {
 		padding: 50px 0;
 		display: none;
 	}
 
-	section.divider .qoutes-text.toggle,
-	section.divider .qoutes-video.toggle,
-	section.divider .qoutes-image.toggle { display: block; }
+	section.divider .qoutes-text.toggle, 
+	section.divider .qoutes-video.toggle, 
+	section.divider .qoutes-image.toggle,
+	section.categories .qoutes-text.toggle, 
+	section.categories .qoutes-video.toggle,
+	section.categories .qoutes-image.toggle { display: block; }
 
-		section.divider .qoutes-text p {
+		section.divider .qoutes-text p,
+		section.categories .qoutes-text p  {
 			width: 100%;
 			min-height: 104px;
 
@@ -546,7 +558,8 @@ section.divider { padding-bottom: 90px; }
 			letter-spacing: normal;
 		}
 
-			section.divider .qoutes-text p span:first-child {
+			section.divider .qoutes-text p span:first-child,
+			section.categories .qoutes-text p span:first-child {
 				width: 50px;
 				height: 50px;
 				border-radius: 50%;
@@ -577,7 +590,8 @@ section.divider { padding-bottom: 90px; }
 				        transform: translateY(-50%);
 			}
 
-			section.divider .qoutes-text p span:last-child {
+			section.divider .qoutes-text p span:last-child,
+			section.categories .qoutes-text p span:last-child {
 				width: 50px;
 				height: 50px;
 				border-radius: 50%;
@@ -608,7 +622,8 @@ section.divider { padding-bottom: 90px; }
 				        transform: translateY(-50%);
 			}
 
-			section.divider .qoutes-text p span.text {
+			section.divider .qoutes-text p span.text,
+			section.categories .qoutes-text p span.text {
 				width: calc(100% - 160px);
 				
 				position: absolute;
@@ -621,16 +636,21 @@ section.divider { padding-bottom: 90px; }
 			}
 
 		section.divider .qoutes-video figure,
-		section.divider .qoutes-image figure {
+		section.divider .qoutes-image figure,
+		section.categories .qoutes-video figure,
+		section.categories .qoutes-image figure {
 			width: 100%;
 			display: block;
 			position: relative;
 		}
 
 			section.divider .qoutes-video figure img,
-			section.divider .qoutes-image figure img { width: 100%; }
+			section.divider .qoutes-image figure img,
+			section.categories .qoutes-video figure img,
+			section.categories .qoutes-image figure img { width: 100%; }
 
-			section.divider .qoutes-video figure span {
+			section.divider .qoutes-video figure span,
+			section.categories .qoutes-video figure span {
 				width: 100%;
 				height: 100%;
 
@@ -650,7 +670,9 @@ section.divider { padding-bottom: 90px; }
 			}
 
 			section.divider .qoutes-image p.title,
-			section.divider .qoutes-video p.title {
+			section.divider .qoutes-video p.title,
+			section.categories .qoutes-image p.title,
+			section.categories .qoutes-video p.title {
 				width: 100%;
 				min-height: 271px;
 
@@ -671,7 +693,9 @@ section.divider { padding-bottom: 90px; }
 			}
 
 				section.divider .qoutes-image p.title span,
-				section.divider .qoutes-video p.title span {
+				section.divider .qoutes-video p.title span,
+				section.categories .qoutes-image p.title span,
+				section.categories .qoutes-video p.title span {
 					position: absolute;
 
 					top: 50%;

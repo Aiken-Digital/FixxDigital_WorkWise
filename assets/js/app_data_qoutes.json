@@ -1,0 +1,103 @@
+{
+	"Meta":{"Status":200,"Message":"OK"},
+	"Response":{
+		"Total_Rows":3,
+		"Rows":[
+		{
+			"Text":"The best way to predict the future is to create it.",
+			"Type":"text",
+			"Image":"",
+			"VideoId":""
+		},{
+			"Text":"The greatest pleasure in life is doing what people say you cannot do.",
+			"Type":"text",
+			"Image":"",
+			"VideoId":""
+		},{
+			"Text":"Work hard in silence. Let success make the noise.",
+			"Type":"text",
+			"Image":"",
+			"VideoId":""
+		},{
+			"Text":"Some people dream of success while others wake up and work hard at it.",
+			"Type":"text",
+			"Image":"",
+			"VideoId":""
+		},{
+			"Text":"Dont let one bad day stop you from reaching your goal.",
+			"Type":"text",
+			"Image":"",
+			"VideoId":""
+		},{
+			"Text":"Work harder than you think you did yesterday.",
+			"Type":"text",
+			"Image":"",
+			"VideoId":""
+		},{
+			"Text":"image quote text is here one",
+			"Type":"image",
+			"Image":"assets/images/article.png",
+			"VideoId":""
+		},{
+			"Text":"image quote text is here two",
+			"Type":"image",
+			"Image":"assets/images/article.png",
+			"VideoId":""
+		},{
+			"Text":"image quote text is here three",
+			"Type":"image",
+			"Image":"assets/images/article.png",
+			"VideoId":""
+		},{
+			"Text":"image quote text is here four",
+			"Type":"image",
+			"Image":"assets/images/article.png",
+			"VideoId":""
+		},{
+			"Text":"image quote text is here five",
+			"Type":"image",
+			"Image":"assets/images/article.png",
+			"VideoId":""
+		},{
+			"Text":"image quote text is here six",
+			"Type":"image",
+			"Image":"assets/images/article.png",
+			"VideoId":""
+		},{
+			"Text":"video quote text is here one",
+			"Type":"video",
+			"Image":"assets/images/article.png",
+			"VideoId":"lG8Ok7n9ZGk"
+		},{
+			"Text":"video quote text is here one",
+			"Type":"video",
+			"Image":"assets/images/article.png",
+			"VideoId":"lG8Ok7n9ZGk"
+		},{
+			"Text":"video quote text is here two",
+			"Type":"video",
+			"Image":"assets/images/article.png",
+			"VideoId":"lG8Ok7n9ZGk"
+		},{
+			"Text":"video quote text is here three",
+			"Type":"video",
+			"Image":"assets/images/article.png",
+			"VideoId":"lG8Ok7n9ZGk"
+		},{
+			"Text":"video quote text is here four",
+			"Type":"video",
+			"Image":"assets/images/article.png",
+			"VideoId":"lG8Ok7n9ZGk"
+		},{
+			"Text":"video quote text is here five",
+			"Type":"video",
+			"Image":"assets/images/article.png",
+			"VideoId":"lG8Ok7n9ZGk"
+		},{
+			"Text":"video quote text is here six",
+			"Type":"video",
+			"Image":"assets/images/article.png",
+			"VideoId":"lG8Ok7n9ZGk"
+		}]
+	}
+}

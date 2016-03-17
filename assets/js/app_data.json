@@ -1,0 +1,71 @@
+{
+	"Meta":{ "Status":200,"Message":"OK" },
+	"Response":{ 
+		"Page":1, "Per_Page":9, "Total_Rows":6," Category":"retirement-adequacy",
+
+		"Rows":[{
+			"Title": "Article 01",
+			"Date":"10-Mar-2016 12:58:00",
+			"Type":"article",
+			"Image":"assets/images/article.png",
+			"Description":"Praesent vehicula, justo dapibus posuere aliquet, est dui blandit nisl, vitae ornare.",
+			"ArticleUrl":"/retirement-adequacy/manpower-minister-gives-assurance-over-cpf-retirement-adequacy"
+		},{
+			"Title": "Article 02",
+			"Date":"08-Mar-2016 12:30:00",
+			"Type":"gallery",
+			"Image":"assets/images/article.png",
+			"Description":"Praesent vehicula, justo dapibus posuere aliquet, est dui blandit nisl, vitae ornare.",
+			"ArticleUrl":"/retirement-adequacy/working-elsewhere"
+		},{
+			"Title": "Article 03",
+			"Date":"12-Feb-2016 12:18:00",
+			"Type":"infographic",
+			"Image":"assets/images/article.png",
+			"Description":"What happens at age 55? How much can we withdraw from our CPF? Can we use our property to help us withdraw more from our CPF after age 55?",
+			"ArticleUrl":"/retirement-adequacy/immigration-to-singapore"
+		},{
+			"Title": "Article 04",
+			"Date":"28-Jan-2016 12:23:00",
+			"Type":"video",
+			"Image":"assets/images/article.png",
+			"Description":"Consectetur adipiscing elit. Nam varius diam eget tellus condimentum",
+			"ArticleUrl":"/retirement-adequacy/10-ways-to-adopt-flexible-work-arrangements"
+		},{
+			"Title": "Article 05",
+			"Date":"08-Jan-2016 11:47:00",
+			"Type":"article",
+			"Image":"assets/images/article.png",
+			"Description":"Praesent vehicula, justo dapibus posuere aliquet, est dui blandit nisl, vitae ornare.",
+			"ArticleUrl":"/retirement-adequacy/employment-act-who-it-covers"
+		},{
+			"Title": "Article 06",
+			"Date":"31-Dec-2015 12:33:00",
+			"Type":"article",
+			"Image":"assets/images/article.png",
+			"Description":"Praesent vehicula, justo dapibus posuere aliquet, est dui blandit nisl, vitae ornare.",
+			"ArticleUrl":"/retirement-adequacy/reporting-employee-earnings-to-iras"
+		},{
+			"Title": "Article 07",
+			"Date":"10-Mar-2016 12:58:00",
+			"Type":"article",
+			"Image":"assets/images/article.png",
+			"Description":"Praesent vehicula, justo dapibus posuere aliquet, est dui blandit nisl, vitae ornare.",
+			"ArticleUrl":"/retirement-adequacy/manpower-minister-gives-assurance-over-cpf-retirement-adequacy"
+		},{
+			"Title": "Article 08",
+			"Date":"08-Mar-2016 12:30:00",
+			"Type":"gallery",
+			"Image":"assets/images/article.png",
+			"Description":"Praesent vehicula, justo dapibus posuere aliquet, est dui blandit nisl, vitae ornare.",
+			"ArticleUrl":"/retirement-adequacy/working-elsewhere"
+		},{
+			"Title": "Article 09",
+			"Date":"12-Feb-2016 12:18:00",
+			"Type":"infographic",
+			"Image":"assets/images/article.png",
+			"Description":"What happens at age 55? How much can we withdraw from our CPF? Can we use our property to help us withdraw more from our CPF after age 55?",
+			"ArticleUrl":"/retirement-adequacy/immigration-to-singapore"
+		}]
+	}
+}
