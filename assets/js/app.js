@@ -142,8 +142,6 @@ $( document ).ready(function() {
 	var urlString = '';
 	var urlStringQoutes = '';
 
-	var chosenQoute = [];
-
 	$('.loadmore p').click(function(){
 		if ($( window ).width() < 922) {
 			urlPerPage = 3;
@@ -162,9 +160,9 @@ $( document ).ready(function() {
 			dataType: "json",
 			
 			success: function(data, textStatus, jqXHR) {
-				var newQoute = '';
-
 				var qoutes = data["Response"]["Rows"];
+
+				var newQoute = '';				
 				var chosen = qoutes[Math.floor(Math.random()*qoutes.length)];
 
 				var qouteText = chosen["Text"];
@@ -182,8 +180,33 @@ $( document ).ready(function() {
 					newQoute = "<div class='row dotted qoutes-"+qouteType+" toggle wow fadeInDown'> <div class='col-md-4 col-md-offset-2 col-xs-12'> <figure> <img src='"+qouteImage+"'> <span class='overlay'> <a href='https://www.youtube.com/embed/"+qouteVideo+"?wmode=transparent'></a> </span> </figure> </div> <div class='col-md-5 col-xs-12 col-xs-offset-0'> <p class='title'> <span>"+qouteText+"</span> </p> </div> </div> ";
 				};
 
-				$(".divider .container").html(newQoute);
 				$(".categories .container").append(newQoute);
+				
+
+
+				var newQoute2 = '';
+				var chosen2 = qoutes[Math.floor(Math.random()*qoutes.length)];
+
+				if (chosen == chosen2) {
+					chosen2 = qoutes[Math.floor(Math.random()*qoutes.length)];
+				};
+
+				var qouteText2 = chosen2["Text"];
+				var qouteType2 = chosen2["Type"];
+				var qouteImage2 = chosen2["Image"];
+				var qouteVideo2 = chosen2["VideoId"];
+
+				newQoute2 = "<div class='row dotted qoutes-"+qouteType2+" toggle wow fadeInDown'> <div class='col-md-8 col-md-offset-2 col-xs-12'> <p> <span> “ </span> <span class='text'>"+qouteText2+"</span> <span> ” </span> </p> </div> </div> ";
+
+				if (qouteType2 == "image") {
+					newQoute2 = "<div class='row dotted qoutes-"+qouteType2+" toggle wow fadeInDown'> <div class='col-md-4 col-md-offset-2 col-xs-12'> <figure> <img src='"+qouteImage2+"'> </figure> </div> <div class='col-md-5 col-xs-12 col-xs-offset-0'> <p class='title'> <span>"+qouteText2+"</span> </p> </div> </div> ";
+				};
+
+				if (qouteType2 == "video") {
+					newQoute2 = "<div class='row dotted qoutes-"+qouteType2+" toggle wow fadeInDown'> <div class='col-md-4 col-md-offset-2 col-xs-12'> <figure> <img src='"+qouteImage2+"'> <span class='overlay'> <a href='https://www.youtube.com/embed/"+qouteVideo2+"?wmode=transparent'></a> </span> </figure> </div> <div class='col-md-5 col-xs-12 col-xs-offset-0'> <p class='title'> <span>"+qouteText2+"</span> </p> </div> </div> ";
+				};
+
+				$(".divider .container").html(newQoute2);
 			},
 
 			error: function() {
