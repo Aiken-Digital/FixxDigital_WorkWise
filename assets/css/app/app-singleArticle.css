@@ -489,14 +489,14 @@ section.single-article { padding-bottom: 90px; }
 	section.single-article .gallery-thumbs.three { 
 		width: calc(100% - 345px); 
 	}
-		section.single-article .gallery-thumbs.two .swiper-slide {
+		section.single-article .gallery-thumbs.three .swiper-slide {
 			width: calc(100%/3);
 		}
 
 	section.single-article .gallery-thumbs.four { 
 		width: calc(100% - 210px); 
 	}
-		section.single-article .gallery-thumbs.two .swiper-slide {
+		section.single-article .gallery-thumbs.four .swiper-slide {
 			width: calc(100%/4);
 		}
 	
@@ -504,6 +504,9 @@ section.single-article { padding-bottom: 90px; }
 			height: 100px;
 			position: relative;
 		}
+
+
+
 
 		section.single-article .gallery-thumbs .swiper-slide span {
 			width: 100%;
