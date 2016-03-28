@@ -861,3 +861,28 @@ section.single-article { padding-bottom: 90px; }
 				line-height: 24px;
 				letter-spacing: 0px;
 			}
+
+section.single-article.category-error{
+	min-height: 500px;
+}
+
+section.single-article.category-error header p{
+	margin-bottom: 20px;
+	background-color: #ec3838;
+}
+
+section.single-article.category-error header p a{
+	color: white;
+}
+
+section.single-article.category-error a{
+	width: auto;
+	color: #3069ce;
+	font-weight: bold;
+	display: inline-block;
+	text-decoration: none;
+}
+
+section.single-article.category-error a:hover{
+	text-decoration: underline;
+}
