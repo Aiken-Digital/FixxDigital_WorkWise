@@ -42,19 +42,6 @@ aside.article-share.disappear { opacity: 0; }
 		letter-spacing: 1.5px;
 	}
 
-	aside.article-share p a {
-		display: inline;
-		color: #2b689d;
-	}
-
-	aside.article-share p a:hover {
-		color: #174369;
-	}
-
-	aside.article-share p em {
-		font-style: italic !important;
-	}
-
 	aside.article-share ul {
 		width: 100%;
 
@@ -325,6 +312,19 @@ section.single-article { padding-bottom: 90px; }
 		line-height: 30px;
 		letter-spacing: 0.5px;
 	}
+
+		section.single-article p a {
+			display: inline;
+			color: #2b689d;
+		}
+
+		section.single-article p a:hover {
+			color: #174369;
+		}
+
+		section.single-article p em {
+			font-style: italic !important;
+		}
 
 		section.single-article figure { width: calc(50% + 45px); }
 
