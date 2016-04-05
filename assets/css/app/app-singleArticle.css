@@ -42,6 +42,19 @@ aside.article-share.disappear { opacity: 0; }
 		letter-spacing: 1.5px;
 	}
 
+	aside.article-share p a {
+		display: inline;
+		color: #2b689d;
+	}
+
+	aside.article-share p a:hover {
+		color: #174369;
+	}
+
+	aside.article-share p em {
+		font-style: italic !important;
+	}
+
 	aside.article-share ul {
 		width: 100%;
 
@@ -97,6 +110,8 @@ aside.article-share.disappear { opacity: 0; }
 @media (min-width: 1200px) {
 	aside.article-share { left: calc(50% - 570px); }
 }
+
+
 
 
 section.single-article { padding-bottom: 90px; }
@@ -886,3 +901,12 @@ section.single-article.category-error a{
 section.single-article.category-error a:hover{
 	text-decoration: underline;
 }
+
+section.single-article .share .wow{
+	padding-top: 40px;
+}
+
+
+
+
+
