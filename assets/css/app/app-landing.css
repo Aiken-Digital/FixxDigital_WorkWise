@@ -330,13 +330,13 @@ section.trending { padding: 0 0 95px 0; }
 				width: calc(100% - 75px);
 
 				padding: 0;
-				margin: 0;
+				margin: -4px 0 0 0;
 
 				font-family: 'Open Sans', sans-serif;
 				font-size: 13px;
 				font-weight: normal;
 				
-				line-height: 10px;
+				line-height: normal;
 				letter-spacing: 2px;
 			}
 
