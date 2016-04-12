@@ -280,7 +280,7 @@ section.single-article { padding-bottom: 90px; }
 		max-width: 100%;
 	}
 
-	section.single-article span {
+	section.single-article .swiper-slide span {
 		width: 100%;
 		display: block;
 
@@ -298,7 +298,10 @@ section.single-article { padding-bottom: 90px; }
 		letter-spacing: normal;
 	}
 
-	section.single-article p {
+	section.single-article p,
+	section.single-article span,
+	section.single-article span p,
+	section.single-article p span {
 		width: 100%;
 		display: block;
 
@@ -315,18 +318,41 @@ section.single-article { padding-bottom: 90px; }
 		line-height: 30px;
 		letter-spacing: 0.5px;
 	}
-
-		section.single-article p a {
+	
+		section.single-article span a,
+		section.single-article span p a,
+		section.single-article p a,
+		section.single-article p span a {
 			display: inline;
 			color: #2b689d;
 		}
 
-		section.single-article p a:hover {
+		section.single-article span a:hover,
+		section.single-article span p a:hover,
+		section.single-article p a:hover,
+		section.single-article p span a:hover  {
 			color: #174369;
 		}
+	
+		section.single-article span em, 
+		section.single-article span i,
+		section.single-article span p em, 
+		section.single-article span p i,
+		section.single-article p em, 
+		section.single-article p i,
+		section.single-article p span em, 
+		section.single-article p span i  {
+			font-style: italic;
+		}
 
-		section.single-article p em {
-			font-style: italic !important;
+		section.single-article span strong,
+		section.single-article p strong,
+		section.single-article p span strong {
+			width: 100%;
+			display: block;
+
+			padding: 0;
+			margin: 23px 0 0 0;
 		}
 
 		section.single-article figure { width: calc(50% + 45px); }
@@ -370,7 +396,7 @@ section.single-article { padding-bottom: 90px; }
 
 			section.single-article figure .videoCage{
 				position: relative;
-				padding-bottom: 56.25%; /* 16:9 */
+				padding-bottom: 56.25%;
 				padding-top: 25px;
 				margin-bottom: 20px;
 				height: 0;
@@ -385,6 +411,7 @@ section.single-article { padding-bottom: 90px; }
 			}
 
 
+	section.single-article span blockquote,
 	section.single-article blockquote {
 		width: 100%;
 		display: block;
@@ -406,33 +433,31 @@ section.single-article { padding-bottom: 90px; }
 		border: none;
 	}
 
-	section.single-article ul {
+	section.single-article ul, 
+	section.single-article ol {
 		width: 100%;
 		display: block;
 
 		padding: 0;
-		margin: 0;
+		margin: 0 0 23px 0;
 
-		    list-style-type: disc;
+		list-style-type: disc;
 	}
 
-		section.single-article ul li {
+	section.single-article ol {
+		padding-left: 20px;
+	}
+
+		section.single-article ul li, 
+		section.single-article ol li  {
 			width: 100%;
 			display: block;
 			position: relative;
+		}
 
-			padding: 0 0 0 20px;
-			margin: 0;
-
-			text-align: left;
-			color: #000;
-
-			font-family: 'Open Sans', sans-serif;
-			font-size: 16px;
-			font-weight: normal;
-
-			line-height: 30px;
-			letter-spacing: 0.5px;
+		section.single-article ol li {
+			list-style-type: decimal;
+			display: list-item !important;
 		}
 
 			section.single-article ul li:before {
@@ -440,18 +465,60 @@ section.single-article { padding-bottom: 90px; }
 
 				width: 4px;
 				height: 4px;
+				
+				display: inline-block;
+				position: relative;
+				vertical-align: top;
 
-				position: absolute;
 				top: 15px;
-				left: 0;
 
 				padding: 0;
-				margin: 0;
+				margin: 0 15px 0 0;
 
 				border-radius: 50%;
 
 				background-color: #000;
 			}
+			
+			section.single-article ul li,
+			section.single-article ul li span,
+			section.single-article ol li,
+			section.single-article ol li span {
+				width: calc(100% - 20px);
+				height: auto;
+
+				margin: 0;
+				padding: 0;
+
+				display: inline-block;
+
+				text-align: left;
+				color: #000;
+
+				font-family: 'Open Sans', sans-serif;
+				font-size: 16px;
+				font-weight: normal;
+
+				line-height: 30px;
+				letter-spacing: 0.5px;
+			}
+				
+				section.single-article ul li a,
+				section.single-article ul li span a,
+				section.single-article ol li a,
+				section.single-article ol li span a {
+					width: auto;
+					height: auto;
+					display: inline-block;
+					color: #06b3bd;
+				}
+					
+					section.single-article ul li a:hover,
+					section.single-article ul li span a:hover,
+					section.single-article ol li a:hover,
+					section.single-article ol li span a:hover {
+						color: #2b689d;
+					}
 
 	section.single-article .gallery-big .swiper-pagination {
 		position: relative;
@@ -654,62 +721,21 @@ section.single-article { padding-bottom: 90px; }
 			border-radius: 0px;
 		}
 
-	section.single-article .tags ul li:before {
-		display: none;
-	}
-
-	/*section.single-article .tags p {
-		width: 100%;
-		display: block;
-
-		padding: 0;
-		margin: 0;
-
-		text-align: left;
-		color: #777777;
-
-		font-family: 'Open Sans', sans-serif;
-		font-size: 14px;
-		font-weight: normal;
-		
-		line-height: normal;
-		letter-spacing: normal;
-	}
-
-		section.single-article .tags p span {
-			width: auto;
-			display: inline-block;
-
-			padding: 0;
-			margin: 0 5px;
-
-			text-transform: uppercase;
-			text-align: left;
-			color: #777777;
-
-			font-family: 'Open Sans', sans-serif;
-			font-size: 10.5px;
-			font-weight: bold;
-
-			line-height: normal;
-			letter-spacing: normal;
-
-			background-color: #e5e5e5;
-			border-radius: 20px;
-
-			-webkit-transition: all 0.2s ease-in-out;
-			   -moz-transition: all 0.2s ease-in-out;
-			     -o-transition: all 0.2s ease-in-out;
-			        transition: all 0.2s ease-in-out;
+		section.single-article .tags ul li:hover {
+			color: #06b3bd;
+			background-color: #eee;
 		}
 
-			section.single-article .tags p span:hover { 
-				color: #06b3bd; 
-				background-color: #eee;
-			}
+		section.single-article .tags ul li:first-child:hover {
+			color: #777777;
+			background-color: transparent;
+		}
 
-			section.single-article .tags p span a { padding: 10px 18px; }
-			section.single-article .tags p span:first-child { margin-left: 10px; }*/
+		section.single-article .tags ul li a {
+			color: inherit;
+		}
+
+	section.single-article .tags ul li:before { display: none; }
 
 
 
@@ -914,7 +940,10 @@ section.single-article { padding-bottom: 90px; }
 				letter-spacing: 1px;
 			}
 
-				section.single-article .next-prev-article article header span a { padding: 10px 15px; }
+				section.single-article .next-prev-article article header span a { 
+					padding: 10px 15px; 
+					color: #fff;
+				}
 
 				section.single-article .next-prev-article article header.label-article span a { background-color: #3069ce; }
 				section.single-article .next-prev-article article header.label-video span a { background-color: #b846cc; }
