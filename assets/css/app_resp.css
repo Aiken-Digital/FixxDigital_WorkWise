@@ -249,6 +249,15 @@
 		position: absolute;
 		left: calc(50% + 40px)
 	}
+	
+	.content article figure {
+		height: auto;
+		background-image: none !important;
+	}
+
+	.content article figure img {
+		display: block;
+	}
 
 	.content article figure span { font-size: 11px; }
 

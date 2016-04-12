@@ -205,8 +205,8 @@ section.landing-hero {
 /********************************************/
 .swiper-pagination.pagination-trending {
 	position: relative;
-	bottom: initial !important;
-	left: initial !important;
+	bottom: auto;
+	left: auto;
 }
 
 section.trending { padding: 0 0 95px 0; }
