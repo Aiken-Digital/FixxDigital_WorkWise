@@ -158,8 +158,11 @@ section.single-article { padding-bottom: 90px; }
 
 			section.single-article header p a { 
 				width: auto;
+				display: block;
 				padding: 10px 15px; 
+				color: #fff;
 			}
+				section.single-article header p a:hover { color: #fff; }
 
 		section.single-article header.label-article p { background-color: #3069ce; }
 		section.single-article header.label-video p { background-color: #b846cc; }
@@ -779,6 +782,11 @@ section.single-article { padding-bottom: 90px; }
 
 	section.single-article .btn-prev-article p { text-align: left; }
 	section.single-article .btn-next-article p { text-align: right; }
+
+		section.single-article .btn-prev-article p a,
+		section.single-article .btn-next-article p a { 
+			color: #999999;
+		}
 
 		section.single-article .btn-prev-article p a:before,
 		section.single-article .btn-next-article p a:after {
