@@ -297,7 +297,8 @@ section.single-article { padding-bottom: 90px; }
 		line-height: normal;
 		letter-spacing: normal;
 	}
-
+	
+	section.single-article,
 	section.single-article p,
 	section.single-article span,
 	section.single-article span p,
@@ -318,7 +319,8 @@ section.single-article { padding-bottom: 90px; }
 		line-height: 30px;
 		letter-spacing: 0.5px;
 	}
-	
+		
+		section.single-article a,
 		section.single-article span a,
 		section.single-article span p a,
 		section.single-article p a,
@@ -333,7 +335,9 @@ section.single-article { padding-bottom: 90px; }
 		section.single-article p span a:hover  {
 			color: #174369;
 		}
-	
+		
+		section.single-article em,
+		section.single-article i,
 		section.single-article span em, 
 		section.single-article span i,
 		section.single-article span p em, 
@@ -345,6 +349,7 @@ section.single-article { padding-bottom: 90px; }
 			font-style: italic;
 		}
 
+		section.single-article strong,
 		section.single-article span strong,
 		section.single-article p strong,
 		section.single-article p span strong {
@@ -969,6 +974,10 @@ section.single-article { padding-bottom: 90px; }
 				line-height: 24px;
 				letter-spacing: 0px;
 			}
+
+				section.single-article .next-prev-article article header h3 a {
+					color: inherit;
+				}
 
 section.single-article.category-error{
 	min-height: 500px;
