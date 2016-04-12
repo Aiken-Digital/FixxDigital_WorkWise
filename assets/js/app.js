@@ -21,7 +21,7 @@ $( document ).ready(function() {
 
 	new WOW().init();
 	
-	$(".nav_resp li:last-child").click(function() {
+	$(".nav_resp").click(function() {
 		$(".navbar-resp").toggleClass("open")
 	});
 
