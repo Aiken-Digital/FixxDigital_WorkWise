@@ -353,8 +353,8 @@ section.single-article { padding-bottom: 90px; }
 		section.single-article span strong,
 		section.single-article p strong,
 		section.single-article p span strong {
-			width: 100%;
-			display: block;
+			/*width: 100%;*/
+			/*display: block;*/
 
 			padding: 0;
 			margin: 23px 0 0 0;
