@@ -546,6 +546,8 @@ section.single-article { padding-bottom: 90px; }
 		display: block;
 		position: relative;
 		text-align: center;
+
+		font-size: 0;
 	}
 	
 	section.single-article .swiper-parent::selection { background-color: #fff; }

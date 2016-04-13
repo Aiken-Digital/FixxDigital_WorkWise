@@ -231,7 +231,7 @@ $( document ).ready(function() {
 					var desc = data["Response"]["Rows"][i]["Description"];
 					var url = data["Response"]["Rows"][i]["ArticleUrl"];
 
-					var appendArcticle = "<div class='col-md-4 col-xs-12 col-sm-12'> <article> <figure class='"+type+"' style='background-image: url("+image+");'> <img src='"+image+"'> <span> <a href='#category-label'> "+type+" </a> </span> </figure> <time datetime='2015-11-27' pubdate> "+date+" </time> <header> <a href='"+url+"'>"+title+"</a> </header> <p>"+desc+"</p> </article> </div>";
+					var appendArcticle = "<div class='col-md-4 col-xs-12 col-sm-12'> <article> <figure class='"+type+"' style='background-image: url("+image+");'> <a href='#single-post'> <img src='"+image+"'> </a> <span> <a href='#category-label'> "+type+" </a> </span> </figure> <time datetime='2015-11-27' pubdate> "+date+" </time> <header> <a href='"+url+"'>"+title+"</a> </header> <p>"+desc+"</p> </article> </div>";
 					
 					if (type == "video") {
 						appendArcticle = "<div class='col-md-4 col-xs-12 col-sm-12'> <article> <figure class='"+type+"' style='background-image: url("+image+");'> <img src='"+image+"'> <span> <a href='#category-label'> "+type+" </a> </span> <span class='overlay'> <a href='"+url+"'> </a> </span> </figure> <time datetime='2015-11-27' pubdate> "+date+" </time> <header> <a href='"+url+"'>"+title+"</a> </header> <p>"+desc+"</p> </article> </div>";
