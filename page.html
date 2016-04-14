@@ -275,6 +275,279 @@
 
 
 
+        <script>
+            /* 
+            var itemsPerPage = 9;
+            var pagePath = window.location.pathname;
+            
+            if (pagePath === "/") {
+                pagePath = $('#content_1_HidPage').val();
+            }
+
+            if (pagePath.charAt(0) === '/') {
+                pagePath = pagePath.substr(1);
+            }
+            $(window).resize(function() {
+                if ($( window ).width() < 922) {
+                    itemsPerPage = 3;
+                } else {
+                    itemsPerPage = 9;
+                }
+            });
+            $(document).ready(function () {
+                var pageNumber = 1;
+                var uriArticleApi = '';
+                var uriQuoteApi = '';
+                if ($(window).width() < 922) {
+                    itemsPerPage = 3;
+                } else {
+                    itemsPerPage = 9;
+                }
+                LoadArticlesPage(uriQuoteApi, uriArticleApi, pageNumber);
+
+                $('#BtnLoadMore').click(function () {
+                    if ($(window).width() < 922) {
+                        itemsPerPage = 3;
+                    } else {
+                        itemsPerPage = 9;
+                    }
+                    
+                    pageNumber += 1;
+                    uriArticleApi = '/api/v1/Workwise/articles?per_page=' + itemsPerPage + '&page=' + pageNumber + '&category=' + pagePath;
+                    uriQuoteApi = '/api/v1/Workwise/quotes';
+
+                    $.ajax({
+                        // url: urlStringQoutes
+                        url: uriQuoteApi,
+                        type: 'GET',
+                        dataType: "json",
+
+                        success: function (data, textStatus, jqXHR) {
+                            var meta = data["Meta"]["Status"];
+                            if (meta != "200") {
+                                console.log('Error getting data : ' + meta + "-" + data["Meta"]["Message"]);
+                                return;
+                            }
+                            
+
+                            var quotes = data["Response"]["Rows"];
+                            var totalCount = data["Response"]["Total_Rows"]
+                            if (typeof quotes !== 'undefined' && quotes != null && quotes.length > 0) {
+                                var oldQuote = $(".divider .container").html();
+
+                                $(".categories .container").append(oldQuote);
+
+                                var newQuote = '';
+                                var tries = 0;
+                                do {
+                                    var chosen = quotes[Math.floor(Math.random() * quotes.length)];
+                                    var quoteText = chosen["Text"];
+                                    var quoteType = chosen["Type"];
+                                    var quoteImage = chosen["Image"];
+                                    var quoteVideo = chosen["VideoId"];
+                                    newQuote = "<div class='row dotted qoutes-" + quoteType + " toggle wow fadeInDown'> <div class='col-md-8 col-md-offset-2 col-xs-12'> <p> <span> “ </span> <span class='text'>" + decodeEntities(quoteText) + "</span> <span> ” </span> </p> </div> </div> ";
+
+                                    if (quoteType == "image") {
+                                        newQuote = "<div class='row dotted qoutes-" + quoteType + " toggle wow fadeInDown'> <div class='col-md-4 col-md-offset-2 col-xs-12'> <figure> <img src='" + quoteImage + "'> </figure> </div> <div class='col-md-5 col-xs-12 col-xs-offset-0'> <p class='title'> <span>" + decodeEntities(quoteText) + "</span> </p> </div> </div> ";
+
+                                    } else if (quoteType == "video") {
+                                        var videoUrl = 'https://www.youtube.com/embed/' + quoteVideo + '?wmode=transparent';
+                                        newQuote = "<div class='row dotted qoutes-" + quoteType + " toggle wow fadeInDown'> <div class='col-md-4 col-md-offset-2 col-xs-12'> <figure> <div class='videoCage'><iframe src='" + videoUrl + "' frameborder='0' sandbox='allow-same-origin allow-scripts allow-popups'>" + videoUrl + "</iframe></div></figure> </div> <div class='col-md-5 col-xs-12 col-xs-offset-0'> <p class='title'> <span>" + decodeEntities(quoteText) + "</span> </p> </div> </div> ";
+                                    }
+                                    tries++;
+                                } while (newQuote == oldQuote && totalCount > 1 && tries < 15);
+
+                                $(".divider .container").html(newQuote);
+                            }
+                        },
+
+                        error: function () {
+                            console.log('Failed getting data.');
+                        },
+                    });
+
+                    $.ajax({
+                        // url: urlString
+                        url: uriArticleApi,
+                        type: 'GET',
+                        dataType: "json",
+
+                        success: function (data, textStatus, jqXHR) {
+                            var meta = data["Meta"]["Status"];
+                            if (meta != "200") {
+                                console.log('Error getting data : ' + meta + "-" + data["Meta"]["Message"]);
+                                return;
+                            }
+
+                            var appendRowArcticle = '';
+                            var articles = data["Response"]["Rows"];
+                            var totalCount = data["Response"]["Total_Rows"];
+                            if (typeof articles !== 'undefined' && articles != null) {
+                                for (var i = 0; i < articles.length; i++) {
+                                    var title = articles[i]["Title"];
+                                    var date = articles[i]["Date"];
+                                    var dateAlt = articles[i]["DateAlt"];
+                                    var type = articles[i]["Type"];
+                                    var image = articles[i]["Image"];
+                                    var desc = (articles[i]["Description"] == null || articles[i]["Description"] == 'undefined') ? "" : articles[i]["Description"];
+                                    var url = articles[i]["ArticleUrl"];
+
+                                    var appendArcticle = "<div class='col-md-4 col-xs-12 col-sm-12'> <article> <figure class='" + type + "' style='background-image:url(\"" + image +"\")'> <img src='" + image + "'> <span> <a href='#category-label'> " + type + " </a> </span> </figure> <time datetime='" + dateAlt + "' pubdate> " + date + " </time> <header> <a href='" + url + "'>" + title + "</a> </header> <p>" + desc + "</p> </article> </div>";
+
+                                    if (type == "video") {
+                                        appendArcticle = "<div class='col-md-4 col-xs-12 col-sm-12'> <article> <figure class='" + type + "' style='background-image:url(\"" + image + "\")'> <img src='" + image + "'> <span> <a href='#category-label'> " + type + " </a> </span> <span class='overlay'> <a href='" + url + "'> </a> </span> </figure> <time datetime='" + dateAlt + "' pubdate> " + date + " </time> <header> <a href='" + url + "'>" + title + "</a> </header> <p>" + desc + "</p> </article> </div>";
+                                    };
+
+                                    // opening row tag
+                                    if (i % 3 == 0) {
+                                        appendRowArcticle += "<div class='row content wow fadeInDown'>" + appendArcticle;
+                                    }
+
+                                        // closing row tag
+                                    else if (i % 3 == 2) {
+                                        appendRowArcticle += appendArcticle + "</div>";
+                                    }
+
+                                    else {
+                                        appendRowArcticle += appendArcticle;
+                                    }
+                                };
+
+                                $(".categories .container").append(appendRowArcticle);
+                                if (totalCount <= itemsPerPage * pageNumber) {
+                                    $('#BtnLoadMore').hide();
+                                }
+                            }
+                        },
+
+                        error: function () {
+                            console.log('Failed getting articles.');
+                        },
+                    });
+                });
+
+               
+            });
+          
+            var LoadArticlesPage = function (uriQuoteApi, uriArticleApi, pageNumber) {
+                uriArticleApi = '/api/v1/Workwise/articles?per_page=' + itemsPerPage + '&page=' + pageNumber + '&category=' + pagePath;
+                uriQuoteApi = '/api/v1/Workwise/quotes';
+
+                $.ajax({
+                    url: uriQuoteApi,
+                    type: 'GET',
+                    dataType: "json",
+
+                    success: function (data, textStatus, jqXHR) {
+                        var meta = data["Meta"]["Status"];
+                        if (meta != "200") {
+                            console.log('Error getting data : ' + meta + "-" + data["Meta"]["Message"]);
+                            return;
+                        }
+                        var quotes = data["Response"]["Rows"];
+                        if (typeof quotes !== 'undefined' && quotes != null && quotes.length > 0) {
+                            var newQuote = '';
+
+                            var chosen = quotes[Math.floor(Math.random() * quotes.length)];
+
+                            var quoteText = chosen["Text"];
+                            var quoteType = chosen["Type"];
+                            var quoteImage = chosen["Image"];
+                            var quoteVideo = chosen["VideoId"];
+                            newQuote = "<div class='row dotted qoutes-" + quoteType + " toggle wow fadeInDown'> <div class='col-md-8 col-md-offset-2 col-xs-12'> <p> <span> “ </span> <span class='text'>" + decodeEntities(quoteText) + "</span> <span> ” </span> </p> </div> </div> ";
+
+                            if (quoteType == "image") {
+                                newQuote = "<div class='row dotted qoutes-" + quoteType + " toggle wow fadeInDown'> <div class='col-md-4 col-md-offset-2 col-xs-12'> <figure> <img src='" + quoteImage + "'> </figure> </div> <div class='col-md-5 col-xs-12 col-xs-offset-0'> <p class='title'> <span>" + decodeEntities(quoteText) + "</span> </p> </div> </div> ";
+
+                            } else if (quoteType == "video") {
+                                var videoUrl = 'https://www.youtube.com/embed/' + quoteVideo + '?wmode=transparent';
+                                newQuote = "<div class='row dotted qoutes-" + quoteType + " toggle wow fadeInDown'> <div class='col-md-4 col-md-offset-2 col-xs-12'> <figure> <div class='videoCage'><iframe src='" + videoUrl + "' frameborder='0' sandbox='allow-same-origin allow-scripts allow-popups'>" + videoUrl + "</iframe></div></figure> </div> <div class='col-md-5 col-xs-12 col-xs-offset-0'> <p class='title'> <span>" + decodeEntities(quoteText) + "</span> </p> </div> </div> ";
+                            }
+
+                            $(".divider .container").html(newQuote);
+                        }
+                       
+                    },
+                    error: function () {
+                        console.log("Error retrieving quotes");
+                    }
+
+                });
+
+                $.ajax({
+                    url: uriArticleApi,
+                    type: 'GET',
+                    dataType: "json",
+
+                    success: function (data, textStatus, jqXHR) {
+                        var meta = data["Meta"]["Status"];
+                        if (meta != "200") {
+                            console.log('Error getting data : ' + meta + "-" + data["Meta"]["Message"]);
+                            return;
+                        }
+                        var appendRowArticle = '';
+                        var articles = data["Response"]["Rows"];
+                        var totalCount = data["Response"]["Total_Rows"];
+                        if (typeof articles !== 'undefined' && articles != null) {
+                            for (var i = 0; i < articles.length; i++) {
+                                var title = articles[i]["Title"];
+                                var date = articles[i]["Date"];
+                                var dateAlt = articles[i]["DateAlt"];
+                                var type = articles[i]["Type"];
+                                var image = articles[i]["Image"];
+                                var desc = (articles[i]["Description"] == null || articles[i]["Description"] == 'undefined') ? "" : articles[i]["Description"];
+                                var url = articles[i]["ArticleUrl"];
+
+                                var appendArticle = "<div class='col-md-4 col-xs-12 col-sm-12'> <article> <figure class='" + type + "' style='background-image:url(\"" + image + "\")'><img src='" + image + "'> <span> <a href='#category-label'> " + type + " </a> </span> </figure> <time datetime='" + dateAlt + "' pubdate> " + date + " </time> <header> <a href='" + url + "'>" + title + "</a> </header> <p>" + desc + "</p> </article> </div>";
+                                if (type == "video") {
+                                    appendArticle = "<div class='col-md-4 col-xs-12 col-sm-12'> <article> <figure class='" + type + "' style='background-image:url(\"" + image + "\")'> <img src='" + image + "'> <span> <a href='#category-label'> " + type + " </a> </span> <span class='overlay'> <a href='" + url + "'> </a> </span> </figure>  <time datetime='" + dateAlt + "' pubdate> " + date + " </time> <header> <a href='" + url + "'>" + title + "</a> </header> <p>" + desc + "</p> </article> </div>";
+                                }
+
+                                // opening row tag
+                                if (i % 3 == 0) {
+                                    appendRowArticle += "<div class='row content wow fadeInDown'>" + appendArticle;
+                                }
+
+                                    // closing row tag
+                                else if (i % 3 == 2) {
+                                    appendRowArticle += appendArticle + "</div>";
+                                }
+
+                                else {
+                                    appendRowArticle += appendArticle;
+                                }
+                            }
+                            $(".categories .container").append(appendRowArticle);
+                            if (totalCount <= itemsPerPage) {
+                                $('#BtnLoadMore').hide();
+                            }
+                        }
+
+                    }
+                });
+            };
+
+            var decodeEntities = (function () {
+                
+                var element = document.createElement('div');
+
+                function decodeHTMLEntities(str) {
+                    if (str && typeof str === 'string') {
+                        // strip script/html tags
+                        str = str.replace(/<script[^>]*>([\S\s]*?)<\/script>/gmi, '');
+                        str = str.replace(/<\/?\w(?:[^"'>]|"[^"]*"|'[^']*')*>/gmi, '');
+                        element.innerHTML = str;
+                        str = element.textContent;
+                        element.textContent = '';
+                    }
+
+                    return str;
+                }
+
+                return decodeHTMLEntities;
+            })();
+            */ 
+        </script>
 
         <!-- PAGE CATEGORIES -->
         <section class="categories">

@@ -143,6 +143,7 @@ $( document ).ready(function() {
 	var urlString = '';
 	var urlStringQoutes = '';
 
+	/*
 	$('.loadmore p').click(function(){
 		if ($( window ).width() < 922) {
 			urlPerPage = 3;
@@ -260,6 +261,7 @@ $( document ).ready(function() {
 			},
 		});
 	});
+	*/
 
 
 });
