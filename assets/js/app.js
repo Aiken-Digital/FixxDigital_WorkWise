@@ -22,7 +22,10 @@ $( document ).ready(function() {
 	new WOW().init();
 	
 	$(".nav_resp").click(function() {
-		$(".navbar-resp").toggleClass("open")
+		$(".navbar-resp").toggleClass("open");
+		// if ($(".searches")) {
+			$("header.navigation").removeClass("searchOpen");
+		// };
 	});
 
 	var carousel_hero_content = new Swiper (".carousel-hero-content", {
@@ -141,7 +144,7 @@ $( document ).ready(function() {
 		$("header.navigation").addClass("searchOpen");
 	});
 
-	$(".closeSearch").click(function(){
+	$(".closesearchbtn").click(function(){
 		$("header.navigation").removeClass("searchOpen");
 	})
 

@@ -470,6 +470,12 @@
 
 @media (max-width: 1200px) { 
 	section.trending article.one header { height: calc(343px - 72px); }
+	.searchbar .closeSearch { display: none; }
+	.searchbar .searchinput img { display: inline-block; }
+	.searchbar .searchinput form { 
+		width: calc(100% - 20px); 
+		display: inline-block;
+	}
 }
 
 

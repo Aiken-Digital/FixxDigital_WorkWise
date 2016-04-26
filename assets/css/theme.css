@@ -88,6 +88,8 @@ header.navigation {
 			display: block;
 		}
 
+		.searchbar .searchinput { font-size: 0; }
+
 		.searchbar .searchinput form{
 			width: 100%;
 			height: auto;
@@ -121,6 +123,18 @@ header.navigation {
 			.searchinput form input:-moz-placeholder { padding-left: 10px; }
 			.searchinput form input::-moz-placeholder { padding-left: 10px; }
 			.searchinput form input:-ms-input-placeholder { padding-left: 10px; }
+
+		.searchbar .searchinput img { 
+			width: 18px;
+			height: 18px;
+
+			padding: 0;
+			margin: 20px 0 0 0;
+
+			display: none;
+			vertical-align: top;
+			position: relative;
+		}
 			
 		.searchbar .closeSearch {
 			font-size: 0;
