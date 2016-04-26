@@ -110,10 +110,10 @@ $( document ).ready(function() {
 
 
 
-	// PAGE DESCRIPTION: FOR PHASE TWO (HIDE FOR PHASE 1)
-	// $(".learnmore").click(function() { 
-	// 	$(".page-description-content").toggleClass("show");
-	// });
+	//PAGE DESCRIPTION: FOR PHASE TWO (HIDE FOR PHASE 1)
+	$(".learnmore").click(function() { 
+		$(".page-description-content").toggleClass("show");
+	});
 
 	var descContentArt = new Swiper('.page-description-content-articles', {
 		initialSlide: 0,
@@ -134,6 +134,17 @@ $( document ).ready(function() {
 			}
 		},
 	});
+
+
+	//search
+	$(".searchNav").click(function(){
+		$("header.navigation").addClass("searchOpen");
+	});
+
+	$(".closeSearch").click(function(){
+		$("header.navigation").removeClass("searchOpen");
+	})
+
 
 
 

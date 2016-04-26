@@ -112,6 +112,8 @@ section.landing-hero {
 			     -o-transition: all 0.3s ease-in-out;
 			        transition: all 0.3s ease-in-out;
 		}
+
+
 			section.landing-hero .carousel-hero-content .hero_content span {
 				width: 100%;
 
@@ -132,6 +134,11 @@ section.landing-hero {
 				line-height: 11px;
 				letter-spacing: 1.5px;
 			}
+
+				section.landing-hero .carousel-hero-content .hero_content span a {
+					width: auto;
+					display: inline-block;
+				}
 
 			section.landing-hero .carousel-hero-content .hero_content header {
 				width: 100%;

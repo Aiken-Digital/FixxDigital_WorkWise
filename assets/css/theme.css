@@ -64,10 +64,100 @@ header.navigation {
 	overflow: hidden;
 	background-color: #fff;
 }
+
+	header.navigation.searchOpen {
+		padding: 20px 0 0 0;
+	}
 	
 	.logo img {  width: 100%; }
 
 	.navbar-resp.open { display: block; }
+
+	header.navigation .searchbar {
+		width: 100%;
+		display: none;
+
+		margin-top: 20px;
+
+		background-color: #f2f2f2;
+		border-top: 1px solid #e5e5e5;
+		border-bottom: 1px solid #e5e5e5;
+	}
+
+		header.navigation.searchOpen .searchbar {
+			display: block;
+		}
+
+		.searchbar .searchinput form{
+			width: 100%;
+			height: auto;
+
+			padding: 0px;
+			margin: 0px; 
+
+			display: block;
+		}
+
+			.searchinput form input {
+				width: 100%;
+				height: auto;
+
+				padding: 18px 20px 18px 0;
+				margin: 0;
+
+				display: block;
+				position: relative;
+
+				color: #0bc3ce;
+				text-align: left;
+
+				font-family: 'Open Sans', sans-serif;
+				font-size: 16px;
+				line-height: normal;
+				letter-spacing: 0px;
+			}
+
+			.searchinput form input::-webkit-input-placeholder { padding-left: 10px; }
+			.searchinput form input:-moz-placeholder { padding-left: 10px; }
+			.searchinput form input::-moz-placeholder { padding-left: 10px; }
+			.searchinput form input:-ms-input-placeholder { padding-left: 10px; }
+			
+		.searchbar .closeSearch {
+			font-size: 0;
+			cursor: pointer;
+		}
+
+			.searchbar .closeSearch p {
+				width: auto;
+				height: auto;
+
+				padding: 0;
+				margin: 0 0 0 74px;
+					
+				display: inline-block;
+				position: relative;
+
+				color: #999999;
+				text-align: left;
+				text-transform: uppercase;
+
+				font-family: 'Open Sans', sans-serif;
+				font-size: 11px;
+				line-height: 58px;
+				letter-spacing: 1px;
+			}
+
+			.searchbar .closeSearch img {
+				width: 18px;
+				height: 18px;
+
+				padding: 0;
+				margin: 20px 0 0 20px;
+
+				display: inline-block;
+				vertical-align: top;
+				position: relative;
+			}
 	
 	nav { width: auto; float: right; }
 		nav ul { float: left; margin: 0; }
@@ -96,9 +186,30 @@ header.navigation {
 			nav ul li.icons a {
 				float: left;
 				width: auto;
+				font-size: 0;
 			}
 				nav ul li.icons a img {
 					height: 13px;
+					vertical-align: middle;
+					margin-top: 2px;
+				}
+
+				nav ul li.icons a.searchNav {
+					padding-left: 5px;
+				}
+
+				nav ul li.icons a.searchNav:before {
+					content: '';
+
+					height: 13px;
+					width: 1px;
+
+					margin-right: 10px;
+
+					display: inline-block;
+					vertical-align: bottom;
+
+					background-color: #e5e5e5;
 				}
 
 					nav ul li.active a { color: #06b3bd; font-weight: 600; }

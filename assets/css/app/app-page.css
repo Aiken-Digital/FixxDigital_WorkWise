@@ -3,6 +3,10 @@
 /************************************************/
 section.page-title { background-color: #000; }
 
+	section.page-title.category {
+		margin-bottom: 60px;
+	}
+
 	section.page-title .title h2 {
 		width: 100%;
 
@@ -76,6 +80,10 @@ section.page-title { background-color: #000; }
 			background-position: center;
 			background-repeat: no-repeat;
 		}
+
+@media (max-width: 992px) {
+	section.page-title { margin-top: 15px; }
+}
 
 			
 
