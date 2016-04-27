@@ -115,6 +115,7 @@ $( document ).ready(function() {
 
 	//PAGE DESCRIPTION: FOR PHASE TWO (HIDE FOR PHASE 1)
 	$(".learnmore").click(function() { 
+		$(".page-title .title").toggleClass("open");
 		$(".page-description-content").toggleClass("show");
 	});
 
