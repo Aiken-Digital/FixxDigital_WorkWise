@@ -82,7 +82,7 @@ section.landing-hero {
 				        transform: skewX(-21deg);
 			}
 	
-	section.landing-hero .carousel-hero-content {
+	section.landing-hero .swiper-parentContainer .carousel-hero-content {
 		width: 30%;
 		height: auto;
 		
@@ -99,10 +99,10 @@ section.landing-hero {
 		        transform: translateY(-50%);
 	}
 
-	section.landing-hero .carousel-hero-content .swiper-slide { opacity: 0 !important; }
-	section.landing-hero .carousel-hero-content .swiper-slide-active { opacity: 1 !important; }
+	section.landing-hero .swiper-parentContainer .carousel-hero-content .swiper-slide { opacity: 0 !important; }
+	section.landing-hero .swiper-parentContainer .carousel-hero-content .swiper-slide-active { opacity: 1 !important; }
 
-		section.landing-hero .carousel-hero-content .hero_content {
+		section.landing-hero .swiper-parentContainer .carousel-hero-content .hero_content {
 			width: 100%;
 			height: auto;
 			position: relative;
@@ -114,7 +114,7 @@ section.landing-hero {
 		}
 
 
-			section.landing-hero .carousel-hero-content .hero_content span {
+			section.landing-hero .swiper-parentContainer .carousel-hero-content .hero_content span {
 				width: 100%;
 
 				display: block;
@@ -135,12 +135,12 @@ section.landing-hero {
 				letter-spacing: 1.5px;
 			}
 
-				section.landing-hero .carousel-hero-content .hero_content span a {
+				section.landing-hero .swiper-parentContainer .carousel-hero-content .hero_content span a {
 					width: auto;
 					display: inline-block;
 				}
 
-			section.landing-hero .carousel-hero-content .hero_content header {
+			section.landing-hero .swiper-parentContainer .carousel-hero-content .hero_content header {
 				width: 100%;
 
 				display: block;
@@ -161,11 +161,37 @@ section.landing-hero {
 				letter-spacing: 2px;
 			}
 
-	section.landing-hero .swiper-pagination {
+	section.landing-hero .swiper-parentContainer .swiper-pagination {
 		position: relative;
 		text-align: left;
 		margin-top: 20px;
 		bottom: 0px;
+	}
+
+	section.landing-hero .swiper-parentContainer .swiper-button-prev,
+	section.landing-hero .swiper-parentContainer .swiper-button-next {
+		width: 18px;
+		height: 100%;
+		padding: 0;
+		margin: 0;
+		
+		top: 0;
+		
+		background-size: 18px;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	section.landing-hero .swiper-parentContainer .swiper-button-prev {
+		left: 50px;
+		right: auto;
+		background-image: url('../../images/icon-carousel_arrow_left.png');
+	}
+
+	section.landing-hero .swiper-parentContainer .swiper-button-next {
+		left: auto;
+		right: 50px;
+		background-image: url('../../images/icon-carousel_arrow_right.png');
 	}
 
 

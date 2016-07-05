@@ -160,7 +160,7 @@
 		}
 		section.landing-hero figure.pattern { display: none; }
 
-		section.landing-hero .carousel-hero-content {
+		section.landing-hero .swiper-parentContainer .carousel-hero-content {
 			width: 100%;
 			
 			padding: 40px 30px 100px 30px;
@@ -177,7 +177,8 @@
 			        transform: translateY(0%);
 		}
 
-		section.landing-hero .swiper-pagination { text-align: center; }
+		section.landing-hero .swiper-parentContainer .swiper-pagination { text-align: center; }
+		
 
 
 

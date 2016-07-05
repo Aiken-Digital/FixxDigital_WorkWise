@@ -28,13 +28,15 @@ $( document ).ready(function() {
 		// };
 	});
 
-	var carousel_hero_content = new Swiper (".carousel-hero-content", {
+	var carousel_hero_content = new Swiper (".carousel-hero-Parent .carousel-hero-content", {
 		effect: "fade",
 		simulateTouch: false,
 		observer: true,
 		observeParents: true,
 
-		pagination: '.carousel-hero-content .swiper-pagination',
+		pagination: '.carousel-hero-Parent .carousel-hero-content .swiper-pagination',
+		nextButton: '.carousel-hero-Parent .swiper-button-next',
+		prevButton: '.carousel-hero-Parent .swiper-button-prev',
 		paginationClickable: true,
 
 		onSlideChangeStart: function(){ 
