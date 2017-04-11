@@ -356,7 +356,7 @@ section.trending { padding: 0 0 95px 0; }
 				font-weight: 300;
 				
 				line-height: 52px;
-				letter-spacing: normal;
+				letter-spacing: -1px;
 			}
 
 			section.trending article header span:nth-child(2) {
@@ -387,7 +387,10 @@ section.trending { padding: 0 0 95px 0; }
 				letter-spacing: 0px;
 			}
 
-			section.trending article.one header span:nth-child(1) { width: 51px; }
+			section.trending article.one header span:nth-child(1) { 
+				width: 51px; 
+				letter-spacing: -5px;
+			}
 			section.trending article.one header span:nth-child(2) { width: calc(100% - 61px); }
 			section.trending article.one header span:nth-child(3) { width: calc(100% - 61px); }
 
